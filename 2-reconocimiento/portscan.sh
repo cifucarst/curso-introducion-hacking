@@ -15,8 +15,8 @@ function checkPort(){
     if [ $? -eq 0 ];then
         echo "[+] Host $1 - Port $2 (Open)"
     fi
-    exec 3>&-
     exec 3<&-
+    exec 3>&-
 }
 
 tput civis
